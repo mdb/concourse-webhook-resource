@@ -1,0 +1,9 @@
+{
+  "params": {
+    "body": "some body",
+    "http_method": "GET"
+  },
+  "source": {
+    "url": "https://some.url"
+  }
+}

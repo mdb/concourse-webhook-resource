@@ -1,0 +1,15 @@
+#!/bin/bash
+
+set -e
+
+exec 3>&1
+exec 1>&2
+
+# for jq
+PATH=/usr/local/bin:$PATH
+
+webhook_url=$(jq -r '.source.url')
+http_method=$(jq -r '.params.http_method // "GET"')
+body=$(jq -r '.params.body // ""')
+
+curl -s -X "${htp_method}" --data-urlencode "${body}" "${webhook_url}"
