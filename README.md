@@ -6,6 +6,24 @@ A [ConcourseCI](http://concourse.ci) resource to issue an HTTP request to some U
 
 * `url`: *Required*. The webhook URL to which an HTTP request should be issued.
 
+Example:
+
+```
+resource_types:
+
+- name: webhook
+  type: docker-image
+  source:
+    repository: clapclapexcitement/concourse-webhook-resource
+
+resources:
+
+- name: ping-some-url
+  type: webhook
+  source:
+    url: "http://some.url"
+```
+
 ## Behavior
 
 ### `out`: Issues an HTTP request
