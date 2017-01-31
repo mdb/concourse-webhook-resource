@@ -45,9 +45,9 @@ body="some body"
 
 username="concourse"
 
-test basic | jq -e "
-  .source.url == $webhook_url and
-  .body == $body and
-  .http_method == $http_method"
+test basic | jq -e '
+  .source.url == "${webhook_url}" and
+  .body == "${body}" and
+  .http_method == "${http_method}"'
 
 echo -e '\e[32;1m'"All tests passed!"'\e[0m'
