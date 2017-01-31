@@ -2,6 +2,10 @@
 
 A [ConcourseCI](http://concourse.ci) resource to issue an HTTP request to some URL from Concourse.
 
+This is largely a simple reference implementation illustrating how to make and test a custom Concourse resource.
+
+[View the Docker image on DockerHub &raquo;](https://hub.docker.com/r/clapclapexcitement/concourse-webhook-resource/)
+
 ## Source Configuration
 
 * `url`: *Required*. The webhook URL to which an HTTP request should be issued.
