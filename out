@@ -12,4 +12,4 @@ webhook_url=$(jq -r '.source.url')
 http_method=$(jq -r '.params.http_method // "GET"')
 body=$(jq -r '.params.body // ""')
 
-curl -s -X "${htp_method}" --data-urlencode "${body}" "${webhook_url}"
+curl -s -X "${http_method}" --data-urlencode "${body}" "${webhook_url}"
